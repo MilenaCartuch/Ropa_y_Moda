@@ -1,12 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ropa y Moda</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Ropa | Milena Store</title>
+  <style>
+    /* ======== ESTILOS GENERALES ======== */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    /* ======== ENCABEZADO SUPERIOR ======== */
+    header {
+      background-color: #e91e63;
+      color: white;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 50%;
+      padding: 8px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #ffe1ef;
+    }
+
+    /* ======== BANNER PRINCIPAL ======== */
+    .banner {
+      background: url('encabezado.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #e91e63;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #f8bbd0;
+    }
+
+    /* ======== SECCIÓN PRODUCTOS ======== */
+    .products {
+      padding: 40px 60px;
+    }
+
+    .products h2 {
+      text-align: center;
+      color: #e91e63;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      background-color: #fafafa;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .product-card p {
+      margin: 0 0 10px;
+      color: #777;
+    }
+
+    .price {
+      color: #e91e63;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .buy-btn {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .buy-btn:hover {
+      background-color: #c2185b;
+    }
+
+    /* ======== PROMOCIÓN FINAL ======== */
+    .promo {
+      background-color: #f8bbd0;
+      text-align: center;
+      padding: 40px 20px;
+      color: #fff;
+      background-image: url('fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .promo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .promo-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .promo h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .promo p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    /* ======== PIE DE PÁGINA ======== */
+    footer {
+      background-color: #e91e63;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .search-bar input {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Las mejores prendas para ti</h1>
-    <p>Descubre nuestra colección exclusiva de ropa y accesorios de moda para todas las ocasiones.</p>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">MILENA STORE</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar ropa...">
+    </div>
+    <nav class="menu">
+      <a href="#">Inicio</a>
+      <a href="#">Mujer</a>
+      <a href="#">Hombre</a>
+      <a href="#">Niños</a>
+      <a href="#">Ofertas</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- BANNER PRINCIPAL -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>MEGA SALE</h1>
+      <p>Descuentos del 50% en ropa de temporada</p>
+      <a href="#" class="btn">Ver Colección</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="products">
+    <h2>Ropa Destacada</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="blusa.webp" alt="Blusa elegante">
+        <h3>Blusa elegante rosa</h3>
+        <p>Moda mujer</p>
+        <div class="price">$29.99</div>
+        <button class="buy-btn">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="chaqueta.jpg" alt="Chaqueta moderna">
+        <h3>Chaqueta moderna</h3>
+        <p>Ropa urbana</p>
+        <div class="price">$49.90</div>
+        <button class="buy-btn">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="vestido.jpeg" alt="Vestido floral">
+        <h3>Vestido floral</h3>
+        <p>Primavera</p>
+        <div class="price">$39.99</div>
+        <button class="buy-btn">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="Sueter.jpg" alt="Suéter beige">
+        <h3>Suéter beige</h3>
+        <p>Casual</p>
+        <div class="price">$34.50</div>
+        <button class="buy-btn">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOCIÓN -->
+  <section class="promo">
+    <div class="promo-content">
+      <h2>FASHION WEEKEND</h2>
+      <p>Aprovecha nuestras rebajas de fin de temporada</p>
+      <a href="#" class="btn">Comprar ahora</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Milena Store | Todos los derechos reservados
+  </footer>
+
 </body>
 </html>
