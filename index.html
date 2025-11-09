@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Ropa | Milena Store</title>
+
   <style>
     /* ======== ESTILOS GENERALES ======== */
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Times New Roman', serif;
       background-color: #fff;
       color: #333;
     }
@@ -24,7 +25,7 @@
 
     /* ======== ENCABEZADO SUPERIOR ======== */
     header {
-      background-color: #e91e63;
+      background-color: #1a1819;
       color: white;
       padding: 10px 40px;
       display: flex;
@@ -63,15 +64,15 @@
     }
 
     .menu a:hover {
-      color: #ffe1ef;
+      color:  #87b1d565 ;
     }
 
-    /* ======== BANNER PRINCIPAL ======== */
+    /* ======== PAGINA PRINCIPAL ======== */
     .banner {
-      background: url('encabezado.jpg') no-repeat center center/cover;
+      background: url('encabezado_pagina.jpg') no-repeat center center/cover;
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 100px 80px;
       position: relative;
     }
 
@@ -99,24 +100,24 @@
 
     .btn {
       background-color: #fff;
-      color: #e91e63;
+      color: #000000;
       padding: 10px 25px;
       border-radius: 25px;
       font-weight: bold;
     }
 
     .btn:hover {
-      background-color: #f8bbd0;
+      background-color:  #87b1d565;
     }
 
-    /* ======== SECCIÓN PRODUCTOS ======== */
+    /* ======== PRODUCTOS ======== */
     .products {
       padding: 40px 60px;
     }
 
     .products h2 {
       text-align: center;
-      color: #e91e63;
+      color: #000000;
       margin-bottom: 30px;
     }
 
@@ -146,25 +147,15 @@
       object-fit: cover;
     }
 
-    .product-card h3 {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-
-    .product-card p {
-      margin: 0 0 10px;
-      color: #777;
-    }
-
     .price {
-      color: #e91e63;
+      color: #000000;
       font-weight: bold;
       font-size: 1.1rem;
       margin-bottom: 15px;
     }
 
     .buy-btn {
-      background-color: #e91e63;
+      background-color: #000000;
       color: white;
       border: none;
       padding: 8px 18px;
@@ -174,16 +165,15 @@
     }
 
     .buy-btn:hover {
-      background-color: #c2185b;
+      background-color: #000000;
     }
 
     /* ======== PROMOCIÓN FINAL ======== */
     .promo {
-      background-color: #f8bbd0;
+      background-color: #000000;
       text-align: center;
       padding: 40px 20px;
       color: #fff;
-      background-image: url('fondo.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
@@ -201,20 +191,9 @@
       z-index: 1;
     }
 
-    .promo h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .promo p {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-    }
-
-    /* ======== PIE DE PÁGINA ======== */
     footer {
-      background-color: #e91e63;
-      color: white;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
       text-align: center;
       padding: 15px;
       font-size: 0.9rem;
@@ -227,25 +206,28 @@
     }
   </style>
 </head>
-<body>
 
-  <!-- HEADER -->
+<body>
+  <!-- ========== ENCABEZADO ========== -->
   <header>
     <div class="logo">MILENA STORE</div>
+
     <div class="search-bar">
       <input type="text" placeholder="Buscar ropa...">
     </div>
+
     <nav class="menu">
       <a href="#">Inicio</a>
       <a href="#">Mujer</a>
       <a href="#">Hombre</a>
       <a href="#">Niños</a>
       <a href="#">Ofertas</a>
+      <a href="formulario.html">Formulario</a> <!-- Enlace directo a formulario -->
       <a href="#">Contacto</a>
     </nav>
   </header>
 
-  <!-- BANNER PRINCIPAL -->
+  <!-- ========== BANNER PRINCIPAL ========== -->
   <section class="banner">
     <div class="banner-content">
       <h1>MEGA SALE</h1>
@@ -254,42 +236,51 @@
     </div>
   </section>
 
-  <!-- PRODUCTOS -->
+  <!-- ========== SECCIÓN DE PRODUCTOS DESTACADOS ========== -->
   <section class="products">
     <h2>Ropa Destacada</h2>
     <div class="product-grid">
+
+      <!-- Tarjeta 1 -->
       <div class="product-card">
-        <img src="blusa.webp" alt="Blusa elegante">
+        <img src="blusa.jpg" alt="Blusa elegante">
         <h3>Blusa elegante rosa</h3>
         <p>Moda mujer</p>
         <div class="price">$29.99</div>
         <button class="buy-btn">Agregar al carrito</button>
       </div>
+
+      <!-- Tarjeta 2 -->
       <div class="product-card">
-        <img src="chaqueta.jpg" alt="Chaqueta moderna">
+        <img src="chaquetaHombre.jpg" alt="Chaqueta moderna">
         <h3>Chaqueta moderna</h3>
-        <p>Ropa urbana</p>
+        <p>Moda hombre</p>
         <div class="price">$49.90</div>
         <button class="buy-btn">Agregar al carrito</button>
       </div>
+
+      <!-- Tarjeta 3 -->
       <div class="product-card">
-        <img src="vestido.jpeg" alt="Vestido floral">
-        <h3>Vestido floral</h3>
+        <img src="ropa_niñas.jpg" alt="Vestido floral">
+        <h3>Vestidos para niñas</h3>
         <p>Primavera</p>
         <div class="price">$39.99</div>
         <button class="buy-btn">Agregar al carrito</button>
       </div>
+
+      <!-- Tarjeta 4 -->
       <div class="product-card">
-        <img src="Sueter.jpg" alt="Suéter beige">
-        <h3>Suéter beige</h3>
+        <img src="ropa_niños.jpg" alt="Suéter beige">
+        <h3>Ropa para niños</h3>
         <p>Casual</p>
         <div class="price">$34.50</div>
         <button class="buy-btn">Agregar al carrito</button>
       </div>
+
     </div>
   </section>
 
-  <!-- PROMOCIÓN -->
+  <!-- ========== PROMOCIÓN FINAL ========== -->
   <section class="promo">
     <div class="promo-content">
       <h2>FASHION WEEKEND</h2>
@@ -298,10 +289,9 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ========== PIE DE PÁGINA ========== -->
   <footer>
     &copy; 2025 Milena Store | Todos los derechos reservados
   </footer>
-
 </body>
 </html>

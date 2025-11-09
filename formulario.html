@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro | Milena Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background-color: #87b1d565;
+      color: #333;
+    }
+
+    header {
+      background-color: #000000;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu a {
+      color: white;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      color:  #87b1d565;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #000000;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #000000;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color:  #87b1d565;
+    }
+
+
+
+    footer {
+      background-color: #000000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">MILENA STORE</div>
+    <nav class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ======== FORMULARIO DE REGISTRO ======== -->
+  <section class="form-container">
+    <h2>Formulario de Registro</h2>
+    <form action="procesar.php" method="POST">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion">
+
+      <label for="genero">Género:</label>
+      <select id="genero" name="genero">
+        <option value="">Seleccione...</option>
+        <option value="Mujer">Mujer</option>
+        <option value="Hombre">Hombre</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <label for="talla">Talla preferida:</label>
+      <select id="talla" name="talla">
+        <option value="">Seleccione...</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+
+      <label for="fecha">Fecha de nacimiento:</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="producto_fav">Producto favorito:</label>
+      <input type="text" id="producto_fav" name="producto_fav">
+
+      <label for="comentarios">Comentarios o sugerencias:</label>
+      <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+      <label>
+        <input type="checkbox" name="suscripcion" value="sí">
+        Deseo recibir promociones por correo.
+      </label>
+
+      <input type="submit" value="Enviar Formulario">
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Milena Store | Todos los derechos reservados
+  </footer>
+</body>
+</html>
