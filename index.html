@@ -122,70 +122,69 @@
 
     <div class="card p-4 shadow">
       <form action="procesar.php" method="POST">
+        <div class="row g-3">
 
-        <div class="mb-3">
-          <label class="form-label">Nombre completo:</label>
-          <input type="text" class="form-control" name="nombre" required>
+          <!-- Columna izquierda -->
+          <div class="col-md-6">
+            <label class="form-label">Nombre completo:</label>
+            <input type="text" class="form-control" name="nombre" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Correo electrónico:</label>
+            <input type="email" class="form-control" name="correo" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Teléfono:</label>
+            <input type="tel" class="form-control" name="telefono" required>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Género:</label>
+            <select class="form-select" name="genero">
+              <option value="">Seleccione...</option>
+              <option value="Mujer">Mujer</option>
+              <option value="Hombre">Hombre</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="col-md-6">
+            <label class="form-label">Talla preferida:</label>
+            <select class="form-select" name="talla">
+              <option value="">Seleccione...</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Fecha de nacimiento:</label>
+            <input type="date" class="form-control" name="fecha">
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Producto favorito:</label>
+            <input type="text" class="form-control" name="producto_fav">
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Comentarios:</label>
+            <textarea class="form-control" rows="3" name="comentarios"></textarea>
+          </div>
+
+          <div class="col-12 form-check mb-2">
+            <input class="form-check-input" type="checkbox" name="suscripcion" value="sí">
+            <label class="form-check-label">Deseo recibir promociones.</label>
+          </div>
+
         </div>
 
-        <div class="mb-3">
-          <label class="form-label">Correo electrónico:</label>
-          <input type="email" class="form-control" name="correo" required>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Teléfono:</label>
-          <input type="tel" class="form-control" name="telefono" required>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Dirección:</label>
-          <input type="text" class="form-control" name="direccion">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Género:</label>
-          <select class="form-select" name="genero">
-            <option value="">Seleccione...</option>
-            <option value="Mujer">Mujer</option>
-            <option value="Hombre">Hombre</option>
-            <option value="Otro">Otro</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Talla preferida:</label>
-          <select class="form-select" name="talla">
-            <option value="">Seleccione...</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Fecha de nacimiento:</label>
-          <input type="date" class="form-control" name="fecha">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Producto favorito:</label>
-          <input type="text" class="form-control" name="producto_fav">
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Comentarios o sugerencias:</label>
-          <textarea class="form-control" rows="4" name="comentarios"></textarea>
-        </div>
-
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" name="suscripcion" value="sí">
-          <label class="form-check-label">Deseo recibir promociones por correo.</label>
-        </div>
-
-        <button class="btn btn-dark w-100">Enviar Formulario</button>
-
+        <button class="btn btn-dark w-100 mt-3">Enviar Formulario</button>
       </form>
     </div>
   </section>
@@ -196,4 +195,5 @@
   </footer>
 
 </body>
+
 </html>
